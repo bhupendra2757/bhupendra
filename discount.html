@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <title>Show Discount</title>
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="dashboardtitle ">Make Your Payment</div>
+                <div class="checkbox">
+                    <label for="show-discount">
+                        <input type="checkbox" class="show-discount" />
+                        Show Discount
+                    </label>
+                </div>
+                <div class="logo-items" style="display: flex">
+                    <div class="logocontainer">
+                        <div class="discount" style="display: none">upto 4.5% </div>
+                        <a href="#" title="BROADLINK PIN ">
+                            <img src="https://paybyonline.com/newbucket/ServiceLogo/categoryTypeLogo/broadlink.png " alt="service-logo " class="background ">
+                        </a>
+                    </div>
+                    <div class="logocontainer">
+                        <div class="discount" style="display: none">upto .5% </div>
+                        <a href="#" title="WEBSURFER BILL PAYMENT ">
+                            <img src="https://paybyonline.com/newbucket/ServiceLogo/categoryTypeLogo/websurfer.png " alt="service-logo " class="background ">
+                        </a>
+                    </div>
+                    <div class="logocontainer">
+                        <div class="discount" style="display: none">upto 4.0% </div>
+                        <a href="#" title="ARROWNET BILL PAYMENT ">
+                            <img src="https://paybyonline.com/newbucket/ServiceLogo/categoryTypeLogo/arrownet.png " alt="service-logo " class="background ">
+                        </a>
+                    </div>
+                    <div class="logocontainer">
+                        <div class="discount" style="display: none">upto 4.2% </div>
+                        <a href="#" title="TECHMIND INTERNET ">
+                            <img src="https://paybyonline.com/newbucket/ServiceLogo/categoryTypeLogo/techminds.png " alt="service-logo " class="background ">
+                        </a>
+                    </div>
+                    <div class="logocontainer">
+                        <div class="discount" style="display: none">upto 4.5% </div>
+                        <a href="#" title="RN INTERNET ">
+                            <img src="https://paybyonline.com/newbucket/ServiceLogo/categoryTypeLogo/royalnet.png " alt="service-logo " class="background ">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        $(function() {
+            $(document.getElementsByClassName("show-discount")).click(function() {
+                if ($(this).is(":checked")) {
+                    $(document.getElementsByClassName("discount")).show();
+                } else {
+                    $(document.getElementsByClassName("discount")).hide();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
