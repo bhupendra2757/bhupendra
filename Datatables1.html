@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+
+
+    <title>Data Tables</title>
+    <style>
+        body {
+            margin-top: 20px;
+        }
+        
+        th,
+        td {
+            white-space: nowrap;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table stripe table-hover  row-border  order-column" id="table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Name</th>
+                            <th colspan="10" class="text-center"> Information</th>
+                        </tr>
+                        <tr>
+                            <!-- <th>Name</th> -->
+                            <th>Roll Number</th>
+                            <th>College Address</th>
+                            <th>Fees</th>
+                            <th>Age</th>
+                            <th>Phone Number</th>
+                            <th>Section</th>
+                            <th>faculty</th>
+                            <th>year</th>
+                            <th>semester</th>
+                            <th>remarks</th>
+                            <!-- <th>remarks</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ram Krishna Shrestha</td>
+                            <td>11</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+
+                        </tr>
+                        <tr>
+                            <td>Arun Shrestha</td>
+                            <td>01</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>Ram Krishna </td>
+                            <td>02</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+
+                        </tr>
+                        <tr>
+                            <td> Shrestha</td>
+                            <td>03</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>Rameee </td>
+                            <td>04</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+
+                        </tr>
+                        <tr>
+                            <td> Krishna </td>
+                            <td>05</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>Ram </td>
+                            <td>06</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+
+                        </tr>
+                        <tr>
+                            <td> Krishna </td>
+                            <td>07</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>Ram Krishna Dhakal</td>
+                            <td>08</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+
+                        </tr>
+                        <tr>
+                            <td>Ram Shrestha</td>
+                            <td>09</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td> Krishna Shrestha</td>
+                            <td>10</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>Ram Krishna Shrestha</td>
+                            <td>11</td>
+                            <td>Indreni Appartment</td>
+                            <td>41,803</td>
+                            <td>17</td>
+                            <td>9800000000</td>
+                            <td>A</td>
+                            <td>Computer Science</td>
+                            <td>first</td>
+                            <td>second</td>
+                            <td>--</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // $('#table').DataTable();
+        $('#table').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'pdf', 'csv', 'print'
+            ]
+        });
+
+        $(document).ready(function() {
+            var table = $('#table').dataTable({
+                "order": [
+                    [3, "desc"]
+                ]
+            });
+        });
+    </script>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
