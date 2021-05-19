@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- datatable cdn -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <!-- buttons -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css">
+    <!-- show columns checkbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <!-- query -->
+    <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+    <!-- datatable cdn -->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <!-- buttons -->
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <!-- fixed column -->
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    <!-- cilumn reorder -->
+    <script src="https://cdn.datatables.net/colreorder/1.3.1/js/dataTables.colReorder.min.js"></script>
+    <!-- column visibility -->
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.colVis.min.js"></script>
+
+
+    <script type="text/javscript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <title>Superadmin DataTables</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+        body {
+            margin-top: 10px;
+            font-family: 'Quicksand', sans-serif;
+            /* font-size: 12px; */
+        }
+        
+        .main-datatable {
+            box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+            padding: 15px;
+        }
+        
+        .DTFC_LeftWrapper .DTFC_LeftHeadWrapper .DTFC_LeftBodyLiner {
+            width: 220px;
+            overflow-y: auto;
+        }
+        
+        table.dataTable thead tr {
+            background-color: #fff;
+        }
+        
+        table.dataTable tbody:hover {
+            background-color: #fff;
+        }
+        
+        th,
+        td {
+            white-space: nowrap;
+        }
+        
+        th {
+            text-transform: uppercase;
+        }
+        
+        .main-datatable .dataTables_wrapper .dt-buttons {
+            float: right !important;
+        }
+        /* .main-datatable .dataTables_wrapper .dt-buttons a {
+            padding: 0px;
+        }
+        
+        .main-datatable .dataTables_wrapper .dt-buttons a span {
+            color: transparent;
+            background-image: url(download.png) !important;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-left: 1x;
+        }
+         */
+        
+        .main-datatable .DTFC_ScrollWrapper .DTFC_LeftWrapper .DTFC_LeftBodyWrapper .DTFC_LeftBodyLiner {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            overflow-y: auto !important;
+            width: 250px !important;
+            height: 471px;
+            max-height: 471px
+        }
+        
+        .main-datatable .DTFC_ScrollWrapper .DTFC_RightWrapper .DTFC_RightBodyWrapper .DTFC_RightBodyLiner {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            overflow-y: auto !important;
+            width: 250px !important;
+            height: 471px;
+            max-height: 471px
+        }
+        
+        .main-datatable .dataTables_wrapper .dataTables_paginate .paginate_button {
+            color: #999999 !important;
+            background-color: #f6f6f6 !important;
+            border-color: #d4d4d4 !important;
+            border-radius: 5px;
+            margin: 5px 3px;
+            padding: 2px;
+        }
+        
+        .main-datatable .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            color: #fff !important;
+            border: 1px solid #3d96f5 !important;
+            background: #4da3ff !important;
+            box-shadow: none;
+        }
+        
+        .main-datatable .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+            color: #fff!important;
+            border-color: transparent !important;
+            background: #007bff !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 main-datatable">
+                <div class="dropdown">
+                    <button class="btn btn-secondary-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Show Columns <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="toggle-vis dropdown-item" data-column="0" data-value="option1" tabIndex="-1"><input type="checkbox" checked />&nbsp;Paid User</a>
+                        <a class="toggle-vis dropdown-item" data-column="1" data-value="option2" tabIndex="-1"><input type="checkbox" checked />&nbsp;Deposited To</a>
+                        <a class="toggle-vis dropdown-item" data-column="2" data-value="option3" tabIndex="-1"><input type="checkbox" checked />&nbsp;IP Address</a>
+                        <a class="toggle-vis dropdown-item" data-column="3" data-value="option4" tabIndex="-1"><input type="checkbox" checked />&nbsp;Transaction Date</a>
+                        <a class="toggle-vis dropdown-item" data-column="4" data-value="option5" tabIndex="-1"><input type="checkbox" checked />&nbsp;Transastion ID</a>
+                        <a class="toggle-vis dropdown-item" data-column="5" data-value="option6" tabIndex="-1"><input type="checkbox" checked />&nbsp;WD</a>
+                        <a class="toggle-vis dropdown-item" data-column="6" data-value="option7" tabIndex="-1"><input type="checkbox" checked />&nbsp;Net wd amount</a>
+                        <a class="toggle-vis dropdown-item" data-column="7" data-value="option8" tabIndex="-1"><input type="checkbox" checked />&nbsp;PT</a>
+                        <a class="toggle-vis dropdown-item" data-column="8" data-value="option9" tabIndex="-1"><input type="checkbox" checked />&nbsp;Payment Method</a>
+                        <a class="toggle-vis dropdown-item" data-column="9" data-value="option10" tabIndex="-1"><input type="checkbox" checked />&nbsp;Net Paid Amount</a>
+                        <a class="toggle-vis dropdown-item" data-column="10" data-value="option11" tabIndex="-1"><input type="checkbox" checked />&nbsp;Payment Info</a>
+                        <a class="toggle-vis dropdown-item" data-column="11" data-value="option12" tabIndex="-1"><input type="checkbox" checked />&nbsp;Status</a>
+                        <a class="toggle-vis dropdown-item" data-column="12" data-value="option13" tabIndex="-1"><input type="checkbox" checked />&nbsp;Action</a>
+                    </div>
+                </div>
+                <table class="table  table-hover order-column" id="table">
+                    <thead>
+                        <tr>
+                            <th>Paid User</th>
+                            <th>Deposited To</th>
+                            <th>IP Address</th>
+                            <th>Transaction Date</th>
+                            <th>Transastion ID</th>
+                            <th>WD</th>
+                            <th>Net wd amount</th>
+                            <th>PT</th>
+                            <th>Payment Method</th>
+                            <th>Net Paid Amount</th>
+                            <th>Payment Info</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+
+
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+
+
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+
+
+                        </tr>
+                        <tr>
+                            <td>bishwavision@gmail.com</td>
+                            <td>PBO</td>
+                            <td>27.34.3.143</td>
+                            <td>2015-01-23</td>
+                            <td>010941902343</td>
+                            <td>0.00(Discount)</td>
+                            <td>7000.00</td>
+                            <td>0.00(Discount)</td>
+                            <td>Bank Deposit</td>
+                            <td>7000.00</td>
+                            <td>Nepal Investment Bank Limited</td>
+                            <td>verified</td>
+                            <td><button>Mail</button><button class="btn-primary toggle_btn">Details</button></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#table').DataTable({
+                dom: 'flBrtip',
+                buttons: [{
+                    extend: 'collection',
+                    text: 'Export',
+                    buttons: [
+                        'copy',
+                        'excel',
+                        'csv',
+                        'pdf',
+                        'print'
+                    ]
+                }],
+                responsive: true,
+                colReorder: true,
+                fade: true,
+                scrollX: true,
+                scrollCollapse: true,
+                columnDefs: [{
+                    orderable: false,
+                    targets: -1
+                }],
+                colReorder: {
+                    fixedColumnsLeft: 1,
+                    fixedColumnsRight: 1
+                },
+                "order": [
+                    [2, "asc"]
+                ],
+            });
+            new $.fn.dataTable.FixedColumns(table, {
+                leftColumns: 1,
+                rightColumns: 1
+            });
+        });
+
+        $(function() {
+            var table = $('#table').DataTable({
+                    responsive: true,
+                    "dom": '<"toolbar">frtip'
+                }),
+                options = ['option1', 'option2', 'option3', 'option4', 'option5', 'option6', 'option7', 'option8', 'option9', 'option10', 'option11', 'option12', 'option13'];
+
+            $("div.toolbar").append($('.dropdown'));
+
+            $('.dropdown-menu a').on('click', function(event) {
+                var $target = $(event.currentTarget),
+                    val = $target.attr('data-value'),
+                    col = table.column($target.attr('data-column')),
+                    $inp = $target.find('input'),
+                    idx;
+                console.log(options.indexOf(val))
+                if ((idx = options.indexOf(val)) > -1) {
+                    options.splice(idx, 1);
+                    setTimeout(function() {
+                        $inp.prop('checked', false)
+                    }, 0);
+                } else {
+                    options.push(val);
+                    setTimeout(function() {
+                        $inp.prop('checked', true)
+                    }, 0);
+                }
+                col.visible(!col.visible());
+                $(event.target).blur();
+                console.log(options);
+                return false;
+            });
+        });
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
