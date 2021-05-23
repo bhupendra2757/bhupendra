@@ -16,7 +16,7 @@
     <!-- show columns checkbox -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <!-- responsive -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">  
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
     <!-- show columns checkbox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
@@ -43,8 +43,8 @@
 
 
     <script type="text/javscript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
- 
- 
+
+
 
     <title>Superadmin DataTables</title>
     <style>
@@ -85,7 +85,7 @@
         .main-datatable .dataTables_wrapper .dt-buttons {
             float: right !important;
         }
-              
+        
         .main-datatable .DTFC_ScrollWrapper .DTFC_LeftWrapper .DTFC_LeftBodyWrapper .DTFC_LeftBodyLiner {
             position: relative;
             top: 0px;
@@ -147,48 +147,48 @@
                         <a class="toggle-vis dropdown-item" data-column="3" data-value="option4" tabIndex="-1"><input type="checkbox" checked />&nbsp;Transaction Date</a>
                         <a class="toggle-vis dropdown-item" data-column="4" data-value="option5" tabIndex="-1"><input type="checkbox" checked />&nbsp;Transastion ID</a>
                         <a class="toggle-vis dropdown-item" data-column="5" data-value="option6" tabIndex="-1"><input type="checkbox" checked />&nbsp;WD</a>
-                        <a class="toggle-vis dropdown-item" data-column="12" data-value="option13" tabIndex="-1"><input type="checkbox" checked />&nbsp;Action</a>
                         <a class="toggle-vis dropdown-item" data-column="6" data-value="option7" tabIndex="-1"><input type="checkbox" checked />&nbsp;Net wd amount</a>
                         <a class="toggle-vis dropdown-item" data-column="7" data-value="option8" tabIndex="-1"><input type="checkbox" checked />&nbsp;PT</a>
                         <a class="toggle-vis dropdown-item" data-column="8" data-value="option9" tabIndex="-1"><input type="checkbox" checked />&nbsp;Payment Method</a>
-                        <a class="toggle-vis dropdown-item" data-column="9" data-value="option10" tabIndex="-1"><input type="checkbox" checked />&nbsp;Net Paid Amount</a>
+                        <a class="toggle-vis dropdown-item" data-column="90" data-value="option10" tabIndex="-1"><input type="checkbox" checked />&nbsp;Net Paid Amount</a>
                         <a class="toggle-vis dropdown-item" data-column="10" data-value="option11" tabIndex="-1"><input type="checkbox" checked />&nbsp;Payment Info</a>
                         <a class="toggle-vis dropdown-item" data-column="11" data-value="option12" tabIndex="-1"><input type="checkbox" checked />&nbsp;Status</a>
+                        <a class="toggle-vis dropdown-item" data-column="12" data-value="option13" tabIndex="-1"><input type="checkbox" checked disabled/>&nbsp;Action</a>
                     </div>
                 </div>
                 <table class="table  table-hover order-column" id="table">
                     <thead>
                         <tr>
-                            <th>Paid User</th>
+                            <th class="all">Paid User</th>
                             <th>Deposited To</th>
-                            <th >IP Address</th>
-                            <th class="sm-none">Transaction Date</th>
-                            <th class="sm-none">Transastion ID</th>
-                            <th class="none">WD</th>
-                            <th>Action</th>
+                            <th>IP Address</th>
+                            <th>Transaction Date</th>
+                            <th>Transastion ID</th>
+                            <th class="">WD</th>
                             <th class="none">Net wd amount</th>
                             <th class="none">PT</th>
                             <th class="none">Payment Method</th>
                             <th class="none">Net Paid Amount</th>
                             <th class="none">Payment Info</th>
                             <th class="none">Status</th>
+                            <th class="all">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                         <tr>
+                        <tr>
                             <td>bishwavision@gmail.com</td>
                             <td>PBO</td>
                             <td>27.34.3.143</td>
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                             <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -197,28 +197,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
-                        </tr> 
-                        <tr>
-                            <td>bishwavision@gmail.com</td>
-                            <td>PBO</td>
-                            <td>27.34.3.143</td>
-                            <td>2015-01-23</td>
-                            <td>010941902343</td>
-                            <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
-                            <td>7000.00</td>
-                            <td>0.00(Discount)</td>
-                            <td>Bank Deposit</td>
-                            <td>7000.00</td>
-                            <td>Nepal Investment Bank Limited</td>
-                            <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -227,28 +212,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
-                        </tr>               
-                        <tr>
-                            <td>bishwavision@gmail.com</td>
-                            <td>PBO</td>
-                            <td>27.34.3.143</td>
-                            <td>2015-01-23</td>
-                            <td>010941902343</td>
-                            <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
-                            <td>7000.00</td>
-                            <td>0.00(Discount)</td>
-                            <td>Bank Deposit</td>
-                            <td>7000.00</td>
-                            <td>Nepal Investment Bank Limited</td>
-                            <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -257,13 +227,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -272,13 +242,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -287,13 +257,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -302,13 +272,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -317,13 +287,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -332,13 +302,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -347,13 +317,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -362,13 +332,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -377,13 +347,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -392,13 +362,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -407,13 +377,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -422,13 +392,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -437,13 +407,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -452,13 +422,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -467,13 +437,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -482,13 +452,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -497,13 +467,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -512,13 +482,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -527,13 +497,13 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
                         <tr>
                             <td>bishwavision@gmail.com</td>
@@ -542,14 +512,15 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
+
                         <tr>
                             <td>bishwavision@gmail.com</td>
                             <td>PBO</td>
@@ -557,29 +528,15 @@
                             <td>2015-01-23</td>
                             <td>010941902343</td>
                             <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                             <td>7000.00</td>
                             <td>0.00(Discount)</td>
                             <td>Bank Deposit</td>
                             <td>7000.00</td>
                             <td>Nepal Investment Bank Limited</td>
                             <td>verified</td>
+                            <td><button class="btn">Mail</button> &nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
                         </tr>
-                        <tr>
-                            <td>bishwavision@gmail.com</td>
-                            <td>PBO</td>
-                            <td>27.34.3.143</td>
-                            <td>2015-01-23</td>
-                            <td>010941902343</td>
-                            <td>0.00(Discount)</td>
-                           <td><button class="btn">Mail</button>	&nbsp;<button class="btn btn-primary" id="toggle_btn">Details</button></td>
-                            <td>7000.00</td>
-                            <td>0.00(Discount)</td>
-                            <td>Bank Deposit</td>
-                            <td>7000.00</td>
-                            <td>Nepal Investment Bank Limited</td>
-                            <td>verified</td>
-                        </tr>
+
 
                     </tbody>
                 </table>
@@ -588,8 +545,9 @@
     </div>
 
     <script>
-       $(document).ready(function() {
-            $('#table').DataTable({
+        $(document).ready(function() {
+            var table = $('table').DataTable({
+                // $('#table').DataTable({
                 dom: 'flBrtip',
                 buttons: [{
                     extend: 'collection',
@@ -603,13 +561,14 @@
                     ]
                 }],
                 // responsive: true,
-               responsive: {
-                  details: {
-                    type: 'column',
-                    target: '#toggle_btn'
-            }
-        },
+                responsive: {
+                    details: {
+                        type: 'column',
+                        target: '#toggle_btn'
+                    }
+                },
                 colReorder: true,
+                fixedColumns: true,
                 // fade: true,
                 // scrollX: true,
                 // scrollCollapse: true,
@@ -637,11 +596,11 @@
             // });
         });
 
-        $(function() {
-            var table = $('#table').DataTable({
-                    responsive: true,
-                    "dom": '<"toolbar">flBrtip'
-                }),
+        // $(function() {
+        $(document).ready(function() {
+            var table = $('table').DataTable(),
+                // $('#table').DataTable(),
+
                 options = ['option1', 'option2', 'option3', 'option4', 'option5', 'option6', 'option7', 'option8', 'option9', 'option10', 'option11', 'option12', 'option13'];
 
             $("div.toolbar").append($('.dropdown'));
