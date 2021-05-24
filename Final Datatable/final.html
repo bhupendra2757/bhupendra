@@ -84,6 +84,7 @@
         
         .main-datatable .dataTables_wrapper .dt-buttons {
             float: right !important;
+            margin-inline-start: .3em;
         }
         
         .main-datatable .DTFC_ScrollWrapper .DTFC_LeftWrapper .DTFC_LeftBodyWrapper .DTFC_LeftBodyLiner {
@@ -526,7 +527,8 @@
         $(document).ready(function() {
             // var table = $('table').DataTable({
             $('#table').DataTable({
-                dom: 'flBrtip',
+                dom: 'Bfltip',
+                // dom: 'flBrtip',
                 buttons: [{
                         extend: 'collection',
                         text: 'Export',
@@ -549,7 +551,7 @@
                     }
                 },
                 colReorder: true,
-                // fixedColumns: true,
+                // fixedColumns: true, 
                 // fade: true,
                 // scrollX: true,
                 // scrollCollapse: true,
