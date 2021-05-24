@@ -58,6 +58,7 @@
         .main-datatable {
             box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
             padding: 15px;
+            /* background-color: #F4F4F4; */
         }
         
         .DTFC_LeftWrapper .DTFC_LeftHeadWrapper .DTFC_LeftBodyLiner {
@@ -85,6 +86,40 @@
         .main-datatable .dataTables_wrapper .dt-buttons {
             float: right !important;
             margin-inline-start: .3em;
+        }
+        
+        button.dt-button,
+        div.dt-button,
+        a.dt-button {
+            position: relative;
+            display: inline-block;
+            box-sizing: border-box;
+            margin-right: 0.333em;
+            padding: 0 !important;
+            border: 1px solid #999;
+            border-radius: 3px;
+        }
+        
+        button.dt-button,
+        div.dt-button,
+        a.dt-button span img {
+            /* width: 70%; */
+            height: 35px !important;
+        }
+        
+        .dataTables_wrapper .dataTables_filter {
+            background-image: url(img/search.svg);
+            background-repeat: no-repeat;
+            height: 35px !important;
+        }
+        
+        .dataTables_wrapper .dataTables_filter input {
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            padding: 5px;
+            background-color: transparent;
+            margin: 0px;
+            width: 70%;
         }
         
         .main-datatable .DTFC_ScrollWrapper .DTFC_LeftWrapper .DTFC_LeftBodyWrapper .DTFC_LeftBodyLiner {
@@ -531,7 +566,7 @@
                 // dom: 'flBrtip',
                 buttons: [{
                         extend: 'collection',
-                        text: 'Export',
+                        text: '<img src = "img/saveas.svg"> ',
                         buttons: [
                             'copy',
                             'excel',
@@ -539,9 +574,16 @@
                             'pdf',
                             'print'
                         ],
-
                     },
-                    'colvis'
+                    // 'colvis', 
+                    {
+                        extend: 'colvis',
+                        text: '<img src = "img/visibility.svg"> ',
+                        titleAttr: 'Column Visibility'
+                    },
+
+
+
                 ],
                 // responsive: true,
                 responsive: {
@@ -571,6 +613,10 @@
                         next: '>|',
                         previous: '|<'
                     },
+                    // search: {
+                    //     text: '<img src = "img/search.svg">',
+                    // },
+                    search: ""
                 }
             });
             // new $.fn.dataTable.FixedColumns(table, {
@@ -583,6 +629,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
+
+</html>
 
 </html>
 
