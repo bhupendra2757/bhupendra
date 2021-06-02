@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <title>AJAX</title>
+
+    <script>
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                $("#test").load("data.txt", {
+                        Name: "Ram",
+                        LastName: "Shah"
+                    },
+                    function() {
+                        alert(" You Sure ");
+                    });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="test">
+        <p>This is my first attempt!!!!</p>
+    </div>
+    <button id="btn">YAHA thichnu hos click here  </button>
+
+</body>
+
+</html>
